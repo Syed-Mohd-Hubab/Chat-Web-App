@@ -60,7 +60,7 @@ namespace Chat_Web_App
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
             // +"?username=" + obj.username + "?password=" + obj.password
             HttpResponseMessage response = client.PostAsync(URL, httpContent).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            c
+            
             if (response.IsSuccessStatusCode)
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Log In Complete!')", true);
